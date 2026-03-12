@@ -167,7 +167,42 @@ for dirname, _ in subdirs_with_dates:
             readme_path.write_text('\n'.join(new_lines))
 
 ]]]-->
-## 2 research projects
+## 5 research projects
+
+### [ZimaOS App Update Mechanism: How It Works](https://github.com/Zufallsgenerat0r/research/tree/main/zimaos-update-mechanism#readme) (2026-03-12 21:44)
+
+ZimaOS, an open-source NAS OS by IceWhale Technology, employs two robust update mechanisms: app updates managed via [CasaOS-AppManagement](https://github.com/IceWhaleTech/CasaOS-AppManagement) (Go service, Docker Compose-based) and system OTA updates powered by [RAUC](https://rauc.io/) using an A/B partition approach. App updates involve catalog refreshes, digest comparisons for images (especially those tagged `:latest`), and atomic replacement with backup/rollback patterns, all triggered through dashboard UI or API endpoints. System updates use signed `.raucb` bundles, written to the inactive partition and boot-switched upon success, with automatic rollback if a new slot fails. Developer workflow is tightly tied to Docker Compose conventions and app store metadata, but is limited by Buildroot's lack of a package manager and potential system/container breakages after upgrades.
+
+**Key findings:**
+- App update detection is cached for 1 hour and relies on Docker manifest digest comparison for `:latest` tags.
+- System updates via RAUC are atomic, signed, and managed at the partition level, ensuring boot fallback.
+- Limitations include no traditional package manager, only Docker extensions, UI/CLI discrepancies, and developer gotchas around compose file handling and third-party integrations.
+- Repeated system upgrades have caused existing containers to fail, and certain hardware features (e.g., GPU passthrough) remain unreliable due to Buildroot’s design.
+- See [ZimaOS adaptation guide](https://www.zimaspace.com/docs/zimaos/Build-Apps) for app development specifics.
+
+### [ZimaOS Developer Experience: Gotchas, Limitations, and Practical Guide](https://github.com/Zufallsgenerat0r/research/tree/main/zimaos-developer-experience#readme) (2026-03-12 21:44)
+
+ZimaOS, developed from the open-source CasaOS, is a NAS operating system built on Buildroot with a Docker-centric application model and simplified web UI. Developers face several notable challenges: custom apps share a project name, `.env` files are unsupported in the UI, app store installs can't be edited, and system-level access is severely limited by the Buildroot base (no package manager, driver installs, or file system flexibility). Migration from CasaOS requires a fresh install, and frequent ZimaOS updates or paid-tier changes have triggered compatibility, GPU passthrough, and storage visibility issues. Docker Compose files need to follow strict metadata conventions (`x-casaos`) for App Store integration, and several network and storage gotchas—like host access from containers and Samba share mounting—require workarounds or are simply unsupported.
+
+**Key findings:**
+- You can create and install apps via the [web UI](https://www.zimaspace.com/docs/zimaos/Build-Apps), CLI, or by submitting to the [App Store](https://github.com/IceWhaleTech/CasaOS-AppStore) (compose files must use strict `x-casaos` metadata).
+- Buildroot base means there is no package manager—extensions are only possible through Docker.
+- Multiple custom apps via UI collide (same project name), `.env` support is missing, and app updates can break both drivers and app configs.
+- Network and storage integrations (host access, mounting, and multi-partition disks) are limited; only storage managed through ZimaOS is visible in the UI.
+- GPU passthrough and driver support are inconsistent and easily broken by updates, with no straightforward fix.
+
+For app developers, the most critical gotchas are the lack of `.env` support, project name collisions, non-editable App Store app configs, fragile update behavior, and strict Compose file requirements.
+
+### [ZimaOS Research Report](https://github.com/Zufallsgenerat0r/research/tree/main/zimaos-research#readme) (2026-03-12 21:44)
+
+ZimaOS is a Buildroot-based, standalone NAS operating system developed by IceWhale Technology, expanding upon the CasaOS platform to deliver advanced storage (RAID/ZFS/Btrfs), optimized hardware support, and robust OTA updates through the RAUC mechanism. Unlike CasaOS—which is a Docker-centric software layer for third-party Linux systems—ZimaOS comes as a full OS image, enabling seamless system-level management, VM provisioning, and enhanced security on supported x86-64 devices. The ecosystem revolves around a Docker-based app store ([CasaOS-AppStore](https://github.com/IceWhaleTech/CasaOS-AppStore)), customizable Compose manifests, and extensible API endpoints for comprehensive lifecycle operations. Notably, ZimaOS introduced a paid tier (CE vs Plus Edition), and its update infrastructure carefully separates system updates (via A/B partitions and RAUC) from manually triggered app updates, prioritizing reliability over automation. For developers, the platform offers granular control through [CasaOS-AppManagement](https://github.com/IceWhaleTech/CasaOS-AppManagement) API and a clear architecture of Go microservices behind a unified Vue.js frontend.
+
+**Key Findings:**
+- ZimaOS supports advanced storage (RAID, ZFS, Btrfs) and VM management, going beyond CasaOS's scope.
+- System updates use RAUC with A/B partitions for rollback safety, while app updates are strictly manual and version-pinned.
+- App ecosystem is modular, Docker Compose-driven, and extensible via official and third-party app stores.
+- The architecture relies on microservices (Go) with all APIs exposed through a secure gateway, with configuration kept in `/etc/casaos/`.
+- Paid Plus Edition removes limits on disks, apps, and users, reflecting a new business model as of v1.5.0+ (2025).
 
 ### [DuckDB Query Security: Sandboxing Untrusted User Queries](https://github.com/Zufallsgenerat0r/research/tree/main/duckdb-query-security#readme) (2026-03-12 16:48)
 

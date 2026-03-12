@@ -1,5 +1,10 @@
 # ZimaOS App Update Mechanism: How It Works
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 ## Overview
 
 ZimaOS is an open-source NAS operating system by [IceWhale Technology](https://github.com/IceWhaleTech), evolved from [CasaOS](https://github.com/IceWhaleTech/CasaOS). It has two distinct update mechanisms:

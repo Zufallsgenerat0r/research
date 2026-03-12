@@ -1,0 +1,8 @@
+ZimaOS is a Buildroot-based, standalone NAS operating system developed by IceWhale Technology, expanding upon the CasaOS platform to deliver advanced storage (RAID/ZFS/Btrfs), optimized hardware support, and robust OTA updates through the RAUC mechanism. Unlike CasaOS—which is a Docker-centric software layer for third-party Linux systems—ZimaOS comes as a full OS image, enabling seamless system-level management, VM provisioning, and enhanced security on supported x86-64 devices. The ecosystem revolves around a Docker-based app store ([CasaOS-AppStore](https://github.com/IceWhaleTech/CasaOS-AppStore)), customizable Compose manifests, and extensible API endpoints for comprehensive lifecycle operations. Notably, ZimaOS introduced a paid tier (CE vs Plus Edition), and its update infrastructure carefully separates system updates (via A/B partitions and RAUC) from manually triggered app updates, prioritizing reliability over automation. For developers, the platform offers granular control through [CasaOS-AppManagement](https://github.com/IceWhaleTech/CasaOS-AppManagement) API and a clear architecture of Go microservices behind a unified Vue.js frontend.
+
+**Key Findings:**
+- ZimaOS supports advanced storage (RAID, ZFS, Btrfs) and VM management, going beyond CasaOS's scope.
+- System updates use RAUC with A/B partitions for rollback safety, while app updates are strictly manual and version-pinned.
+- App ecosystem is modular, Docker Compose-driven, and extensible via official and third-party app stores.
+- The architecture relies on microservices (Go) with all APIs exposed through a secure gateway, with configuration kept in `/etc/casaos/`.
+- Paid Plus Edition removes limits on disks, apps, and users, reflecting a new business model as of v1.5.0+ (2025).

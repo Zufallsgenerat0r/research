@@ -1,5 +1,10 @@
 # ZimaOS Research Report
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 ## 1. What is ZimaOS?
 
 **ZimaOS** is an open-source NAS operating system developed by [IceWhale Technology](https://github.com/IceWhaleTech). It evolved from [CasaOS](https://github.com/IceWhaleTech/CasaOS) (33.4k GitHub stars), which is a lightweight personal cloud software layer that runs on top of existing Linux distributions. ZimaOS takes the CasaOS foundation and builds it into a **full standalone OS using Buildroot**, with enhanced storage management, hardware optimizations, and OTA update capabilities.
