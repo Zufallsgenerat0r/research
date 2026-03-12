@@ -1,0 +1,66 @@
+Food,German Name,Category,kg_CO2eq_per_kg,Source
+Beer,Bier,Beverages,0.5,IFEU 2020
+Orange juice,Orangensaft,Beverages,0.7,IFEU 2020
+Wine,Wein,Beverages,1.0,IFEU 2020
+Coffee,Kaffee,Beverages,5.6,IFEU 2020
+Cow's milk,Kuhmilch,Dairy,1.4,IFEU 2020
+Yogurt,Joghurt,Dairy,1.7,IFEU 2020
+Cream,Sahne,Dairy,4.2,IFEU 2020
+"Cheese (soft, e.g. Quark)",Quark / Weichkäse,Dairy,5.0,IFEU 2020
+Cheese (hard),Käse (Hart),Dairy,8.5,IFEU 2020
+Butter,Butter,Dairy,9.0,IFEU 2020
+Eggs,Eier,Eggs,3.0,IFEU 2020
+"Fish (wild-caught, avg)",Fisch (Wildfang),Fish,3.5,Poore 2018
+"Fish (farmed, avg)",Fisch (Zucht),Fish,5.0,Poore 2018
+Shrimp (farmed),Garnelen (Zucht),Fish,12.0,Poore 2018
+Peaches (fresh),Pfirsiche (frisch),Fruits,0.2,IFEU 2020
+Apples (regional),Äpfel (regional),Fruits,0.3,IFEU 2020
+Pears,Birnen,Fruits,0.3,IFEU 2020
+Strawberries (seasonal),Erdbeeren (saisonal),Fruits,0.3,IFEU 2020
+Oranges,Orangen,Fruits,0.4,IFEU 2020
+Pineapple (ship),Ananas (Schiff),Fruits,0.6,IFEU 2020
+Bananas,Bananen,Fruits,0.8,Poore 2018
+Avocado,Avocado,Fruits,0.8,IFEU 2020
+Peaches (canned),Pfirsiche (Dose),Fruits,1.6,IFEU 2020
+Berries (air-freighted),Beeren (Flugware),Fruits,10.0,IFEU 2020 est.
+Pineapple (air freight),Ananas (Flugware),Fruits,15.1,IFEU 2020
+Peas,Erbsen,Grains & Legumes,0.4,Poore 2018
+Oats,Haferflocken,Grains & Legumes,0.5,IFEU 2020
+Wheat bread,Weizenbrot,Grains & Legumes,0.6,IFEU 2020
+Rye bread,Roggenbrot,Grains & Legumes,0.6,IFEU 2020
+Lentils,Linsen,Grains & Legumes,0.7,Poore 2018
+Pasta,Nudeln,Grains & Legumes,0.8,IFEU 2020
+Tofu,Tofu,Grains & Legumes,2.0,Poore 2018
+Rice,Reis,Grains & Legumes,3.6,IFEU 2020
+Pork,Schweinefleisch,Meat,4.6,IFEU 2020
+Processed sausage (Wurst),Wurst,Meat,4.8,IFEU 2020
+Turkey,Putenfleisch,Meat,5.0,IFEU 2020
+Chicken,Hähnchen,Meat,5.5,IFEU 2020
+Beef,Rindfleisch,Meat,13.6,IFEU 2020 (DE avg)
+Lamb,Lammfleisch,Meat,25.0,Poore 2018 (EU)
+Sugar,Zucker,Other,0.5,IFEU 2020
+Nuts (mixed),Nüsse (gemischt),Other,1.2,IFEU 2020
+Rapeseed oil,Rapsöl,Other,2.5,IFEU 2020
+Olive oil,Olivenöl,Other,3.5,Poore 2018
+Chocolate (dark),Schokolade (dunkel),Other,4.5,IFEU 2020
+Oat milk,Hafermilch,Plant-based,0.3,IFEU 2020
+Almond milk,Mandelmilch,Plant-based,0.3,IFEU 2020
+Soy milk,Sojamilch,Plant-based,0.4,IFEU 2020
+Margarine,Margarine,Plant-based,1.3,IFEU 2020
+Carrots,Karotten,Vegetables,0.1,IFEU 2020
+White cabbage,Weißkohl,Vegetables,0.1,IFEU 2020
+Potatoes,Kartoffeln,Vegetables,0.2,IFEU 2020
+Aubergine,Aubergine,Vegetables,0.2,IFEU 2020
+Onions,Zwiebeln,Vegetables,0.2,IFEU 2020
+Spinach,Spinat,Vegetables,0.3,IFEU 2020
+Broccoli,Brokkoli,Vegetables,0.3,IFEU 2020
+Zucchini,Zucchini,Vegetables,0.3,IFEU 2020
+Pumpkin,Kürbis,Vegetables,0.3,IFEU 2020
+Lettuce,Kopfsalat,Vegetables,0.3,IFEU 2020
+Brussels sprouts (fresh),Rosenkohl (frisch),Vegetables,0.4,IFEU 2020
+"Tomatoes (seasonal, regional)",Tomaten (saisonal),Vegetables,0.4,IFEU 2020
+Bell peppers,Paprika,Vegetables,0.5,IFEU 2020
+Asparagus (regional),Spargel (regional),Vegetables,0.5,IFEU 2020
+Brussels sprouts (frozen),Rosenkohl (tiefgefroren),Vegetables,0.7,IFEU 2020
+"Tomatoes (greenhouse, heated)",Tomaten (Gewächshaus),Vegetables,2.9,IFEU 2020
+Asparagus (air-freighted),Spargel (Flugware),Vegetables,5.0,IFEU 2020 est.
