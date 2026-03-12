@@ -1,5 +1,10 @@
 # Works in Progress Magazine: Author & Topic Analysis
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 An automated categorization and visualization of [Works in Progress](https://worksinprogress.co/) magazine — a publication dedicated to ideas about progress in science, technology, economics, and society.
 
 ## Overview
