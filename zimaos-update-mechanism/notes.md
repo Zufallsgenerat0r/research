@@ -61,9 +61,28 @@ Key findings:
   6. Rebuilds cache (catalog, categories, recommendations)
   7. Restores backup on failure
 
+### Step 7: Deep source code analysis (2026-03-12)
+- Read full source of `service/compose_app.go` Update(), PullAndApply(), Pull() functions
+- Read full source of `service/appstore_management.go` IsUpdateAvailable(), IsUpdateAvailableWith()
+- Read full source of `service/appstore.go` UpdateCatalog(), BuildCatalog()
+- Read full source of `pkg/docker/digest.go` CompareDigest(), GetDigest(), tokenAndURL()
+- Read full source of `pkg/docker/image.go` PullImage()
+- Read full source of `route/v2/compose_app.go` UpdateComposeApp() handler
+- Read full source of `route/v2/docker.go` RecreateContainerByID() handler
+- Read full source of `route/v2/image.go` PullImages() handler
+- Read full source of `common/message.go` all event type definitions
+- Read full source of `common/constants.go` NeedCheckDigestTags
+- Read full source of `main.go` cron setup
+- Read OpenAPI spec `api/app_management/openapi.yaml`
+- Read CasaOS-AppStore structure: Apps/Plex/docker-compose.yml, build scripts
+- Confirmed: digest comparison code is credited to containrrr/watchtower
+- Confirmed: rauc.txt manifest contains version, download URLs, checksums
+- Confirmed: RAUC offline path is /DATA/rauc/offline/ or /ZimaOS-HD/rauc/offline/
+
 ### Sources consulted
 - GitHub repos: CasaOS-AppManagement, CasaOS-AppStore, ZimaOS, CasaOS
 - ZimaOS docs: Build-Apps manual, OpenAPI docs, release notes
 - Community forum: community.zimaspace.com
 - CasaOS wiki: wiki.casaos.io
 - Third-party blogs and GitHub issues
+- rauc.txt manifest from IceWhaleTech/zimaos-rauc
