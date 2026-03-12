@@ -1,0 +1,271 @@
+{
+  "total_articles": 116,
+  "total_issues": 21,
+  "total_unique_authors": 72,
+  "years_covered": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "top_10_authors": {
+    "Samuel Hughes": 8,
+    "Samuel Watling": 6,
+    "Brian Potter": 4,
+    "Benjamin Reinhardt": 3,
+    "David Sch\u00f6nholzer": 3,
+    "Anya Martin": 3,
+    "Nick Whitaker": 3,
+    "Saloni Dattani": 3,
+    "Virginia Postrel": 3,
+    "Sam Bowman": 3
+  },
+  "top_10_topics": {
+    "policy": 33,
+    "economics": 29,
+    "technology": 29,
+    "science": 28,
+    "innovation": 25,
+    "history": 23,
+    "health": 18,
+    "housing": 17,
+    "cities": 15,
+    "medicine": 11
+  },
+  "broad_categories": {
+    "Other": 5,
+    "Health & Medicine": 39,
+    "History": 26,
+    "Economics & Policy": 103,
+    "Housing & Urban Planning": 53,
+    "Science & Innovation": 67,
+    "Infrastructure & Transport": 26,
+    "Technology & Materials": 40,
+    "Risk & Space": 4,
+    "Energy & Environment": 17,
+    "Agriculture": 1,
+    "Demographics": 5
+  },
+  "author_categorization": {
+    "Samuel Hughes": {
+      "primary_category": "Housing & Urban Planning",
+      "all_categories": {
+        "Housing & Urban Planning": 18,
+        "Infrastructure & Transport": 3,
+        "Economics & Policy": 3
+      },
+      "article_count": 8,
+      "topic_breadth": 6
+    },
+    "Samuel Watling": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Infrastructure & Transport": 1,
+        "Energy & Environment": 1,
+        "Economics & Policy": 11,
+        "Housing & Urban Planning": 3,
+        "History": 5
+      },
+      "article_count": 6,
+      "topic_breadth": 7
+    },
+    "Brian Potter": {
+      "primary_category": "Infrastructure & Transport",
+      "all_categories": {
+        "Housing & Urban Planning": 2,
+        "Infrastructure & Transport": 5,
+        "Technology & Materials": 4,
+        "Economics & Policy": 1
+      },
+      "article_count": 4,
+      "topic_breadth": 7
+    },
+    "David Sch\u00f6nholzer": {
+      "primary_category": "Infrastructure & Transport",
+      "all_categories": {
+        "Other": 1,
+        "Economics & Policy": 2,
+        "Infrastructure & Transport": 4,
+        "Housing & Urban Planning": 2
+      },
+      "article_count": 3,
+      "topic_breadth": 6
+    },
+    "Saloni Dattani": {
+      "primary_category": "Health & Medicine",
+      "all_categories": {
+        "Health & Medicine": 4,
+        "History": 1,
+        "Science & Innovation": 2,
+        "Economics & Policy": 1,
+        "Technology & Materials": 1
+      },
+      "article_count": 3,
+      "topic_breadth": 6
+    },
+    "Sam Bowman": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Economics & Policy": 6,
+        "Housing & Urban Planning": 2,
+        "Infrastructure & Transport": 1
+      },
+      "article_count": 3,
+      "topic_breadth": 5
+    },
+    "Virginia Postrel": {
+      "primary_category": "Technology & Materials",
+      "all_categories": {
+        "Infrastructure & Transport": 1,
+        "Energy & Environment": 1,
+        "Technology & Materials": 2,
+        "Agriculture": 1,
+        "History": 2,
+        "Science & Innovation": 2
+      },
+      "article_count": 3,
+      "topic_breadth": 7
+    },
+    "Benjamin Reinhardt": {
+      "primary_category": "Science & Innovation",
+      "all_categories": {
+        "Science & Innovation": 5,
+        "Technology & Materials": 4
+      },
+      "article_count": 3,
+      "topic_breadth": 5
+    },
+    "Nick Whitaker": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Economics & Policy": 6,
+        "Technology & Materials": 2,
+        "History": 1
+      },
+      "article_count": 3,
+      "topic_breadth": 4
+    },
+    "Anya Martin": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Economics & Policy": 4,
+        "Technology & Materials": 1,
+        "Science & Innovation": 2,
+        "Health & Medicine": 1,
+        "Energy & Environment": 1
+      },
+      "article_count": 3,
+      "topic_breadth": 8
+    },
+    "Jason Crawford": {
+      "primary_category": "Science & Innovation",
+      "all_categories": {
+        "Science & Innovation": 5,
+        "Economics & Policy": 1
+      },
+      "article_count": 2,
+      "topic_breadth": 4
+    },
+    "Tamara Winter": {
+      "primary_category": "Infrastructure & Transport",
+      "all_categories": {
+        "Infrastructure & Transport": 2,
+        "Science & Innovation": 2,
+        "Technology & Materials": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 3
+    },
+    "John Myers": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Housing & Urban Planning": 1,
+        "Economics & Policy": 3,
+        "Energy & Environment": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 5
+    },
+    "Ben Southwood": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Housing & Urban Planning": 1,
+        "Economics & Policy": 3,
+        "Infrastructure & Transport": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 5
+    },
+    "Eli Dourado": {
+      "primary_category": "Science & Innovation",
+      "all_categories": {
+        "Economics & Policy": 1,
+        "Science & Innovation": 3,
+        "Technology & Materials": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 4
+    },
+    "Stephan J. Guyenet": {
+      "primary_category": "Health & Medicine",
+      "all_categories": {
+        "Health & Medicine": 4,
+        "Science & Innovation": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 3
+    },
+    "Jack Devanney": {
+      "primary_category": "Energy & Environment",
+      "all_categories": {
+        "Energy & Environment": 4,
+        "Technology & Materials": 1,
+        "Risk & Space": 1
+      },
+      "article_count": 2,
+      "topic_breadth": 4
+    },
+    "Gavriel Kleinwaks": {
+      "primary_category": "Health & Medicine",
+      "all_categories": {
+        "Health & Medicine": 2,
+        "Energy & Environment": 2,
+        "Technology & Materials": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 3
+    },
+    "Rachel Glennerster": {
+      "primary_category": "Economics & Policy",
+      "all_categories": {
+        "Health & Medicine": 2,
+        "Economics & Policy": 4
+      },
+      "article_count": 2,
+      "topic_breadth": 5
+    },
+    "Bo Malmberg": {
+      "primary_category": "Science & Innovation",
+      "all_categories": {
+        "Science & Innovation": 4,
+        "History": 2
+      },
+      "article_count": 2,
+      "topic_breadth": 3
+    }
+  },
+  "editorial_team": [
+    "Sam Bowman",
+    "Saloni Dattani",
+    "Ben Southwood",
+    "Nick Whitaker",
+    "Samuel Hughes",
+    "Virginia Postrel",
+    "Pieter Garicano",
+    "Rachel Edwards",
+    "Aria Babu",
+    "Alex Chalmers"
+  ]
+}
