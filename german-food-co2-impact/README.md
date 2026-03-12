@@ -1,5 +1,10 @@
 # CO2 Impact of Food in Germany
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 ## Overview
 
 This investigation examines the greenhouse gas emissions (measured in kg CO2-equivalents) associated with food production and consumption in Germany. It covers individual food products, typical German dishes, the annual dietary footprint, and reduction strategies.
