@@ -204,9 +204,53 @@ Update checks are cached for **1 hour**. If you push a new version of your app t
 
 Apps installed with `?uncontrolled=true` are **exempt from version tracking** — they won't show up in update checks. This is useful for development but means users must manually manage updates.
 
+### No Package Manager — Docker Only
+
+ZimaOS is built on **Buildroot, not a traditional Linux distro**. There is no `apt`, `yum`, or any package manager. Docker containers are the **only** extension mechanism. You cannot install system-level packages. ([#117](https://github.com/IceWhaleTech/ZimaOS/issues/117))
+
+### No `.env` File Support in Web UI
+
+The Docker Compose import via the Web UI does **not support `.env` files**. All environment variables must be inlined in the compose file. ([#195](https://github.com/IceWhaleTech/ZimaOS/issues/195))
+
+### Cannot Edit App Store Apps' Compose Files
+
+Changes to compose files for apps installed from the store **get overwritten**. You must uninstall and reinstall as a custom app to modify compose configuration.
+
+### `localhost` Doesn't Resolve to Host
+
+From within containers, `localhost` does not resolve to the ZimaOS host. Use `host.docker.internal` with `extra_hosts` mapping instead.
+
+### Docker Swarm Directives Break Import
+
+Strip `deploy`, `configs`, and `secrets` directives from compose files before importing — these Swarm-only features cause the import to fail.
+
+### `WEBUI_PORT` Is Allocated Once
+
+The `WEBUI_PORT` magic variable is assigned once at install time and **never reassigned** if the port gets taken by another app later.
+
+### System Updates Can Break Running Apps
+
+Multiple ZimaOS version upgrades (v1.4.3, v1.4.4-1, v1.5.3) have broken existing containers with exit code 137 or "failed to start" errors. App settings may also reset after power cycles. ([#288](https://github.com/IceWhaleTech/ZimaOS/issues/288), [#272](https://github.com/IceWhaleTech/ZimaOS/issues/272))
+
+### GPU Passthrough Is Fragile
+
+GPU passthrough works inconsistently across containers, and **NVIDIA drivers can break on OS update** with no fix path due to Buildroot's immutable nature. ([#225](https://github.com/IceWhaleTech/ZimaOS/issues/225))
+
+### Storage Management Is GUI-Coupled
+
+- CLI-mounted drives aren't recognized by the Files app
+- Only one partition per disk is supported
+- Samba/CIFS share paths can get incorrectly stripped ([#294](https://github.com/IceWhaleTech/ZimaOS/issues/294))
+- The `/media/ZimaOS-HD` symlink resets on every reboot ([#343](https://github.com/IceWhaleTech/ZimaOS/issues/343))
+
+### Docker Registry Polling
+
+ZimaOS queries `registry-1.docker.io` **every 30 seconds**, which can cause issues with Pi-hole or other DNS filtering tools.
+
 ### Volume Path Conventions
 
 Docker apps on ZimaOS use specific path conventions:
+- App data: `/DATA/AppData/$AppID/`
 - App config: `/var/lib/casaos/apps/<appname>/`
 - User data: Typically under `/DATA/` mount point
 - RAUC offline updates: `/ZimaOS-HD/rauc/offline/` or `/DATA/rauc/offline/`
