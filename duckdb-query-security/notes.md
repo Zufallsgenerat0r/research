@@ -70,7 +70,24 @@ The order of SET commands matters:
 4. `SET allow_community_extensions=false`
 5. `SET lock_configuration=true` (MUST BE LAST)
 
-### 8. Gotchas discovered
+### 8. Known CVEs and security bypasses
+- **CVE-2024-41672** (DuckDB <= 1.0.0): `sniff_csv()` could read filesystem content (including `/proc/self/environ`, `/etc/hosts`) even with `enable_external_access=false` and `lock_configuration=true`. Fixed in DuckDB 1.1.0. This demonstrates why defense-in-depth (OS-level sandboxing) matters.
+- **CVE-2025-59037**: npm supply chain attack on `duckdb@1.3.3` and `@duckdb/duckdb-wasm@1.29.2`. Not a DuckDB engine vulnerability but a phishing-based package compromise. Fixed in 1.3.4+.
+- **CVE-2024-9264**: Grafana SQL injection via DuckDB — a Grafana bug, not DuckDB. Demonstrates the risk of embedding DuckDB without input sanitization.
+- DuckDB's own docs warn: these settings "cannot provide complete protection against all attack vectors, especially when executing untrusted SQL." Combine with OS/container-level sandboxing for robust security.
+
+### 9. Additional settings discovered via web research
+- `disabled_filesystems` — can set to `'LocalFileSystem'` to block local file access while allowing remote (S3, HTTP).
+- `autoload_known_extensions` and `autoinstall_known_extensions` — should be set to `false` in sandbox environments.
+- `allow_unsigned_extensions` — should remain `false` (default).
+- `allow_persistent_secrets` — controls whether secrets persist across restarts.
+
+### 10. connection.interrupt() caveats
+- Interrupt is not instantaneous: DuckDB must process at least one tuple chunk before honoring it. Complex operations may delay response.
+- GitHub issue #15925 reports unreliable interrupt behavior on in-memory connections from different threads.
+- GitHub issue #10699 reports occasional crashes from race conditions during interrupt of complex queries.
+
+### 11. Gotchas discovered
 - `allowed_paths` requires `VARCHAR[]` type — string value causes cast error
 - `allowed_paths` cannot be passed via config dict to `duckdb.connect()` — must use SQL SET
 - `read_only=True` on `:memory:` raises an error, not a silent no-op

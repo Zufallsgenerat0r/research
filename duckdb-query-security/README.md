@@ -175,9 +175,21 @@ rows = run_sandboxed_query(
 | `demo_05_resource_limits.py` | Demo: thread, memory, and disk limits |
 | `notes.md` | Detailed research notes and findings |
 
+## Known CVEs
+
+| CVE | Versions | Description |
+|-----|----------|-------------|
+| CVE-2024-41672 | <= 1.0.0 | `sniff_csv()` bypassed `enable_external_access=false` to read filesystem content. Fixed in 1.1.0. |
+| CVE-2025-59037 | npm 1.3.3 | Supply chain attack on npm packages (not an engine vulnerability). Fixed in 1.3.4+. |
+| CVE-2024-9264 | N/A | Grafana SQL injection via DuckDB (Grafana bug, not DuckDB). |
+
+DuckDB's own documentation warns: these settings "cannot provide complete protection against all attack vectors." For robust security, **combine with OS/container-level sandboxing** (seccomp, namespaces, Docker with restricted capabilities).
+
 ## Remaining Considerations
 
 - **SQL injection in the application layer**: The sandbox protects DuckDB, but your application must still use parameterized queries to prevent SQL injection when building queries from user input.
 - **Information leakage**: `duckdb_settings()` and `PRAGMA version` are accessible and reveal configuration details. For high-security environments, consider wrapping queries to filter these.
 - **Denial of service via result size**: A query like `SELECT * FROM range(1000000000)` produces huge output. Consider adding application-level `LIMIT` enforcement or result-size caps.
 - **No per-query memory limits**: `memory_limit` is per-connection, not per-query. One expensive query can consume the entire budget.
+- **`connection.interrupt()` reliability**: Not instantaneous — DuckDB must process at least one tuple chunk first. There are open GitHub issues (#15925, #10699) about unreliable interrupt and occasional race-condition crashes. For critical deployments, add a hard process-kill fallback.
+- **OS-level sandboxing**: For maximum security, run DuckDB inside a container or process sandbox (seccomp, namespaces) in addition to the DuckDB-level settings.
