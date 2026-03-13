@@ -167,7 +167,17 @@ for dirname, _ in subdirs_with_dates:
             readme_path.write_text('\n'.join(new_lines))
 
 ]]]-->
-## 6 research projects
+## 7 research projects
+
+### [Open Source Alternatives to Slack: Deployment, Security & Maintainability](https://github.com/Zufallsgenerat0r/research/tree/main/slack-alternatives#readme) (2026-03-13 18:05)
+
+Evaluating five leading open source Slack alternatives—Mattermost, Rocket.Chat, Zulip, Element/Matrix (Synapse), and Revolt (Stoat)—this study analyzed deployment options, security posture, maturity, and maintainability. **Mattermost** emerges as the best fit for compliance-focused enterprises with its robust admin tooling and support, although some key features are paywalled; **Zulip** stands out for those prioritizing fully open source solutions with its Apache 2.0 license, threaded discussions, and outstanding contributor community. **Element/Matrix** offers unmatched end-to-end encryption and federation for privacy-critical use cases, but introduces the most operational complexity. Rocket.Chat remains a feature-rich option for technically adept teams wary of licensing nuances, while Revolt (Stoat) is best left to casual Discord-like communities due to its weak security posture. For more details, see the official repositories: [Mattermost](https://github.com/mattermost/mattermost), [Zulip](https://github.com/zulip/zulip), and [Matrix/Element](https://github.com/matrix-org/synapse).
+
+**Key findings:**
+- Zulip is the only top-tier, fully open source (Apache 2.0) platform with no proprietary features or code.
+- Element/Matrix is the sole platform with default end-to-end encryption and true federation, but demands the most technical effort to deploy and maintain.
+- Mattermost and Rocket.Chat provide enterprise features and support, but both have key features restricted to proprietary tiers.
+- Revolt (Stoat) lacks mature security practices, limiting its suitability to informal, community-based use.
 
 ### [CO2 Impact of Food in Germany](https://github.com/Zufallsgenerat0r/research/tree/main/german-food-co2-impact#readme) (2026-03-12 23:19)
 
