@@ -1,0 +1,9 @@
+# Ignore generated output files over 2MB (can be regenerated with run_all.py)
+flow_density_contours.png
+flow_lines_neon_contour.png
+rd_chaos_to_order_step010000.png
+rd_contour_chaos_to_order_step010000.png
+rd_contour_coral_step010000.png
+rd_contour_worms_step010000.png
+rd_coral_step010000.png
+rd_worms_step010000.png
