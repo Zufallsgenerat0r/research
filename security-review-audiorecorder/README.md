@@ -1,5 +1,10 @@
 # Security Review: Dimowner/AudioRecorder
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 **Repository:** https://github.com/Dimowner/AudioRecorder
 **Review Date:** 2026-03-16
 **Reviewer:** Automated security analysis
