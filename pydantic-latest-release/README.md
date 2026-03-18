@@ -1,5 +1,10 @@
 # Latest Major Release of Python Pydantic
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 ## Overview
 
 **Pydantic v2** is the latest major release of the Pydantic data validation library for Python. Released on **June 30, 2023**, it represented a complete ground-up rewrite of the validation engine. As of March 2026, the latest stable version is **v2.12.5** (November 26, 2025), with **v2.13** in beta. Pydantic v3 is planned but has no confirmed release date.
