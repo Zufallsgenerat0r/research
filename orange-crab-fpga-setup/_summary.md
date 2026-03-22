@@ -1,0 +1,7 @@
+OrangeCrab is a compact FPGA board based on the Lattice ECP5, notable for its open-source toolchain compatibility (Yosys, nextpnr, ecppack) and out-of-the-box support for RISC-V CPUs via a DFU bootloader. Leveraging [LiteX](https://github.com/enjoy-digital/litex), users can build custom Python-defined SoCs featuring VexRiscv cores—optimal for running MicroPython or CircuitPython—and integrate peripherals and memory controllers with ease. The open-source workflow allows end-to-end automation, from toolchain installation to bitstream and firmware generation, and supports hardware acceleration through Custom Function Units (CFUs) that target interpreter bottlenecks. Integration of CFUs, developed with tools like [CFU-Playground](https://cfu-playground.readthedocs.io/), enables incremental performance boosts, making OrangeCrab ideal for prototyping and deploying Python-capable FPGA systems without vendor restrictions.
+
+Key findings:
+- Yosys/nextpnr/ecppack toolchain enables fully open-source bitstream generation for ECP5-based boards.
+- LiteX significantly streamlines Python-driven SoC configuration and build, supporting MicroPython/CircuitPython out-of-the-box.
+- VexRiscv (Full variant) delivers the best balance of performance and extensibility for interpreter workloads on limited FPGA resources.
+- CFUs provide flexible hardware acceleration for high-impact interpreter operations, with a documented integration path in LiteX and VexRiscv.
