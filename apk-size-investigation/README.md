@@ -1,5 +1,10 @@
 # APK Size Investigation: jellyfin-audio-player (Fintunes)
 
+<!-- AI-GENERATED-NOTE -->
+> [!NOTE]
+> This is an AI-generated research report. All text and code in this report was created by an LLM (Large Language Model). For more information on how these reports are created, see the [main research repository](https://github.com/simonw/research).
+<!-- /AI-GENERATED-NOTE -->
+
 **Repository:** https://github.com/leinelissen/jellyfin-audio-player
 **Date:** 2026-04-12
 **Current APK size:** 120.7 MB (v2.4.6 stable), 143.4 MB (v2.5.0-beta.2)
