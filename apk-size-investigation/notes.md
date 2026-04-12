@@ -79,6 +79,39 @@ Modules without their own native code (Java/Kotlin only or JS-only):
 - **react-airplay**: only used in iOS file (Casting.ios.tsx) -- may still be linked on Android
 - **react-native-collapsible**: only used once (Sentry settings accordion)
 
+### Step 8: Independent verification via GitHub API and code search
+
+Verified all key findings independently:
+
+1. **Release sizes confirmed via GitHub API:**
+   - v2.5.0-beta.2: 143.43 MB APK
+   - v2.5.0-beta.1: 127.92 MB APK
+   - v2.4.6: 120.68 MB APK, 86.10 MB AAB
+   - v2.4.5: 114.04 MB APK
+   - v2.4.4: 103.50 MB APK
+   - v2.4.3: 103.50 MB APK
+   - Clear upward trend: +40 MB over 4 releases
+
+2. **build.gradle confirmed:** No mention of "splits", "abi", or "enableSeparateBuildPerCPUArchitecture" anywhere.
+   `def enableProguardInReleaseBuilds = false` and `minifyEnabled enableProguardInReleaseBuilds` confirmed.
+
+3. **Skia usage confirmed via GitHub code search:** `@shopify/react-native-skia` appears in only 4 files:
+   - `src/components/CoverImage.tsx` (the only actual source code import)
+   - `package.json` (dependency declaration)
+   - `ios/Podfile.lock` (iOS dependency resolution)
+   - `pnpm-workspace.yaml` (workspace config)
+
+4. **react-native-shadow-2 confirmed unused:** Only appears in `package.json` (1 result). Zero imports in any source file.
+
+5. **lodash usage confirmed:** 7 source files import from lodash:
+   - `src/utility/usePlayTracks.ts`
+   - `src/screens/Music/stacks/Artist.tsx`
+   - `src/store/downloads/selectors.ts`
+   - `src/components/DownloadManager.ts`
+   - `src/screens/Music/stacks/components/TrackListView.tsx`
+   - `src/screens/Search/stacks/Search/index.tsx`
+   - `src/screens/modals/SetJellyfinServer/components/CredentialGenerator.tsx`
+
 ### Key Learning
 The universal APK bundles native code for 4 CPU architectures. Each architecture gets its own
 copy of Hermes, React Native core libs, Skia, Reanimated, and other native modules. Skia alone

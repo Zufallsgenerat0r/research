@@ -2,8 +2,21 @@
 
 **Repository:** https://github.com/leinelissen/jellyfin-audio-player
 **Date:** 2026-04-12
-**Current APK size:** 120.7 MB (v2.4.6), 143.4 MB (v2.5.0-beta.2)
+**Current APK size:** 120.7 MB (v2.4.6 stable), 143.4 MB (v2.5.0-beta.2)
 **Current AAB size:** 86.1 MB (v2.4.6)
+
+### APK Size Trend (verified via GitHub API)
+
+| Release | APK Size | Change |
+|---------|----------|--------|
+| v2.4.3 | 103.50 MB | -- |
+| v2.4.4 | 103.50 MB | +0 MB |
+| v2.4.5 | 114.04 MB | +10.5 MB |
+| v2.4.6 | 120.68 MB | +6.6 MB |
+| v2.5.0-beta.1 | 127.92 MB | +7.2 MB |
+| v2.5.0-beta.2 | 143.43 MB | +15.5 MB |
+
+The APK has grown **~40 MB (+38%)** across just 6 releases.
 
 ## Tech Stack Overview
 
@@ -164,7 +177,7 @@ The font is duplicated. The `react-native.config.js` asset linking points to `sr
 | Dependency | Issue | Action |
 |-----------|-------|--------|
 | `react-native-shadow-2` | Zero imports in source code | Remove entirely |
-| `lodash` (1.7 MB) | Only 6 functions used (xor, intersection, shuffle, debounce, chunk, groupBy) | Replace with `lodash-es` or individual `lodash.debounce` packages, or use native JS alternatives |
+| `lodash` (1.7 MB) | Only 6 functions used across 7 files (xor, intersection, shuffle, debounce, chunk, groupBy) | Replace with `lodash-es` or individual `lodash.debounce` packages, or use native JS alternatives |
 | `react-airplay` | Only used in iOS-specific file (`Casting.ios.tsx`) | Verify it's not auto-linked on Android; if so, exclude from Android build |
 | `react-native-collapsible` | Used once (Sentry settings) | Consider inline replacement |
 | `react-native-webview` | Used once (CredentialGenerator for server auth) | Acceptable, but heavy for single use |
